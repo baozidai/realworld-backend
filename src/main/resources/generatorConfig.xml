@@ -1,0 +1,23 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+ "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+ "https://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="dsql" targetRuntime="MyBatis3DynamicSql">
+    <jdbcConnection driverClass="org.postgresql.Driver"
+        connectionURL="jdbc:postgresql://192.168.248.32:5432/realworld" 
+        userId="dev_account"
+        password="d784512d"/>
+
+    <javaModelGenerator targetPackage="me.baozidai.realworld.model" targetProject="src/main/java"/>
+
+    <javaClientGenerator targetPackage="me.baozidai.realworld.mapper" targetProject="src/main/java"/>
+
+    <table schema="public" tableName="article_tags" />
+    <table schema="public" tableName="articles" />
+    <table schema="public" tableName="comments" />
+    <table schema="public" tableName="favorites" />
+    <table schema="public" tableName="followings" />
+    <table schema="public" tableName="realworld_users" />
+    <table schema="public" tableName="tags" />
+  </context>
+</generatorConfiguration>
